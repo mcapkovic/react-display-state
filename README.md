@@ -1,6 +1,6 @@
 # react-display-state
 
-> display react state on a page
+> display react state and rerender count on a page
 
 [![NPM](https://img.shields.io/npm/v/react-display-state.svg)](https://www.npmjs.com/package/react-display-state) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -15,14 +15,17 @@ npm install --save react-display-state
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-display-state'
+import { DisplayState } from "react-display-state";
 
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+function Example(){
+  return(
+     <DisplayState
+        title="Title"
+        state={{ a: "1", b: "2" }} // replace with react state
+        expanded // optional
+        theme='light' // optional
+      />
+  )
 }
 ```
 

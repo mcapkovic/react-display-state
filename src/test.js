@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import { DisplayState } from "./";
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+describe("DisplayState", () => {
+  it("is truthy", () => {
+    expect(DisplayState).toBeTruthy();
+  });
+});

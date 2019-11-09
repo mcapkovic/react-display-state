@@ -1,13 +1,30 @@
-import React, { Component } from 'react'
+import React, { Fragment, useState, useEffect } from "react";
+import ThemeSwitcher from "./ThemeSwitcher";
+import { DisplayState } from "react-display-state";
+import { THEME_DARK, THEME_LIGHT } from "./constants";
 
-import ExampleComponent from 'react-display-state'
+function App() {
+  const [theme, setTheme] = useState(THEME_LIGHT);
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
+  useEffect(() => {
+    if (theme === THEME_DARK) {
+      document.body.className = THEME_DARK;
+    } else {
+      document.body.className = THEME_LIGHT;
+    }
+  }, [theme]);
+
+  return (
+    <Fragment>
+      <ThemeSwitcher theme={theme} setTheme={setTheme} />
+      <DisplayState
+        expanded={true}
+        theme={theme}
+        title="Title"
+        state={{ theme, a: "1", b: "2", c: { d: "3", e: "4" } }}
+      />
+    </Fragment>
+  );
 }
+
+export default App;

@@ -1,0 +1,18 @@
+@value colors: "./colors.css";
+@value darkBlue,darkBlueRGB, lightGray, lightGrayRGB from colors;
+
+.component {
+  margin: 1em;
+  background: darkBlue;
+  color: lightGray;
+  border-color: lightGray;
+}
+
+.title {
+  color: darkBlue;
+  background: lightGray;
+}
+
+.title:hover {
+  background: rgba(lightGrayRGB, 0.9);
+}
