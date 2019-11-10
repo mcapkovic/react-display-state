@@ -21,8 +21,9 @@ function Example(){
   return(
      <DisplayState
         title="Title"
-        state={{ a: "1", b: "2" }} // replace with react state
+        state={{ a: "1", b: "2" }} // replace with a react state
         expanded // optional
+        renderCount // optional
         theme='light' // optional
       />
   )

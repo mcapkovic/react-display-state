@@ -17,3 +17,9 @@ body.dark{
     margin: 5px;
     width: 120px;
 }
+
+button{
+  font-size: 16px;
+  margin: 5px;
+  width: 120px;
+}

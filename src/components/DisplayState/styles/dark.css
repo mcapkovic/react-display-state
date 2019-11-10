@@ -8,6 +8,10 @@
   border-color: lightGray;
 }
 
+.highlight {
+  border-color: yellow;
+}
+
 .title {
   color: darkBlue;
   background: lightGray;
