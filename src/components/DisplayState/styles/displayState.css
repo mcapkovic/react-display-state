@@ -1,9 +1,6 @@
-@value colors: "./colors.css";
-@value darkBlue, lightGray, lightGrayRGB from colors;
 @value borderRadius: 5px;
 
 .component {
-  margin: 1em;
   border-radius: 5px;
   font-size: 16px;
   border-width: 2px;

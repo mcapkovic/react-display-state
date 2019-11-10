@@ -2,7 +2,6 @@
 @value darkBlue,darkBlueRGB, lightGray, lightGrayRGB from colors;
 
 .component {
-  margin: 1em;
   background: transparent;
   color: darkBlue;
   border-color: darkBlue;
