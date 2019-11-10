@@ -4,6 +4,7 @@ import styles from "./styles/displayState.css";
 import lightTheme from "./styles/light.css";
 import darkTheme from "./styles/dark.css";
 
+/** Show display state */
 export function DisplayState(props) {
   const [isExpanded, setIsExpanded] = useState(props.expanded);
 
@@ -15,7 +16,7 @@ export function DisplayState(props) {
   const theme = props.theme === "dark" ? darkTheme : lightTheme;
 
   useEffect(() => {
-    element.current = document.getElementById(`displayState${id}`);
+    element.current = document.getElementById(`displayState${id.current}`);
   }, []);
 
   useEffect(() => {
@@ -29,8 +30,9 @@ export function DisplayState(props) {
 
   return (
     <div
-      id={`displayState${id}`}
-      className={`${styles.component} ${theme.component} `}
+      id={`displayState${id.current}`}
+      style={props.style}
+      className={`${styles.component} ${theme.component} ${props.className}`}
     >
       <div
         className={`${styles.title} ${theme.title}`}
@@ -64,14 +66,22 @@ export function DisplayState(props) {
 }
 
 DisplayState.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
   title: PropTypes.string,
-  theme: PropTypes.string,
+  /** Theme switch */
+  theme: PropTypes.oneOf(['light', 'dark']),
+  /** State to show */
   state: PropTypes.any,
+  /** DisplayState default size */
   expanded: PropTypes.bool,
+  /** Activate render count */
   renderCount: PropTypes.bool
 };
 
 DisplayState.defaultProps = {
+  className: "",
+  style: null,
   title: "",
   theme: "light",
   state: null,

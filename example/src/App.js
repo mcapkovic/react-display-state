@@ -19,6 +19,7 @@ function App() {
     <Fragment>
       <ThemeSwitcher theme={theme} setTheme={setTheme} />
       <DisplayState
+        style={{margin: '1em'}}
         theme={theme}
         title="Title"
         renderCount
