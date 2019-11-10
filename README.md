@@ -23,6 +23,7 @@ function Example(){
         title="Title"
         state={{ a: "1", b: "2" }} // replace with react state
         expanded // optional
+        renderCount // optional
         theme='light' // optional
       />
   )

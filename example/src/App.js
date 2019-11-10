@@ -5,6 +5,7 @@ import { THEME_DARK, THEME_LIGHT } from "./constants";
 
 function App() {
   const [theme, setTheme] = useState(THEME_LIGHT);
+  const [, forceUpdate] = useState(null);
 
   useEffect(() => {
     if (theme === THEME_DARK) {
@@ -18,11 +19,19 @@ function App() {
     <Fragment>
       <ThemeSwitcher theme={theme} setTheme={setTheme} />
       <DisplayState
-        expanded={true}
         theme={theme}
         title="Title"
+        renderCount
+        expanded
         state={{ theme, a: "1", b: "2", c: { d: "3", e: "4" } }}
       />
+      <button
+        onClick={() => {
+          forceUpdate(Math.random());
+        }}
+      >
+        forceUpdate
+      </button>
     </Fragment>
   );
 }
