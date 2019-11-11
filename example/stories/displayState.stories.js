@@ -10,7 +10,7 @@ storiesOf("Example", module).add("DisplayState", () => (
       title="Title"
       renderCount
       expanded
-      state={{ a: "1", b: "2", c: { d: "3", e: "4" } }}
+      state={{ a: "1" }}
     />
     <DisplayState
       style={{ margin: "1em" }}

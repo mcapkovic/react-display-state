@@ -7,6 +7,10 @@
   border-color: darkBlue;
 }
 
+.component pre{
+  color: darkBlue;
+}
+
 .highlight {
   border-color: red;
 }

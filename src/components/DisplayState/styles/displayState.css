@@ -1,11 +1,22 @@
 @value borderRadius: 5px;
 
+.component * {
+  box-sizing: border-box;
+}
+
 .component {
+  font-family: arial;
+  line-height: normal;
   border-radius: 5px;
   font-size: 16px;
   border-width: 2px;
   border-style: solid;
   transition: border-color 0.2s ease;
+}
+
+.component pre {
+  font-size: 0.8rem;
+  font-family: monospace;
 }
 
 .title {
@@ -21,16 +32,16 @@
 .content {
   padding: 1rem;
   margin: 0;
-  height: 1.3em;
+  height: 3.5em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .contentExpaded {
-  min-height: 4em;
+  min-height: 6.5em;
   height: auto;
   text-overflow: clip;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .more {
