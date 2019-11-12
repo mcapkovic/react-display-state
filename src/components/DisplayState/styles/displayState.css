@@ -15,7 +15,7 @@
 }
 
 .component pre {
-  font-size: 0.8rem;
+  font-size: 1em;
   font-family: monospace;
 }
 
@@ -32,7 +32,7 @@
 .content {
   padding: 1rem;
   margin: 0;
-  height: 3.5em;
+  height: 3.4em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
