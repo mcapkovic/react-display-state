@@ -17,6 +17,7 @@
 .component pre {
   font-size: 1em;
   font-family: monospace;
+  border: none;
 }
 
 .title {

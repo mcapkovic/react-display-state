@@ -1,14 +1,15 @@
 @value colors: "./colors.css";
-@value darkBlue,darkBlueRGB, lightGray, lightGrayRGB from colors;
+@value darkBlue, darkBlueRGB, lightGray, lightGrayRGB from colors;
 
 .component {
   background: transparent;
   color: darkBlue;
-  border-color: darkBlue;
+  border-color: lightGray;
 }
 
 .component pre{
   color: darkBlue;
+  background-color: transparent;
 }
 
 .highlight {
@@ -16,10 +17,10 @@
 }
 
 .title {
-  color: white;
-  background: darkBlue;
+  color: darkBlue;
+  background: lightGray;
 }
 
 .title:hover {
-  background: rgba(darkBlueRGB, 0.9);
+  background: rgba(lightGrayRGB, 0.7);
 }
