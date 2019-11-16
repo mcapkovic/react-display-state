@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-display-state.svg)](https://www.npmjs.com/package/react-display-state) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-![alt test](screenshots/DisplayState-light.png)
+![display-state light](screenshots/DisplayState-light.png)
 
 ## Install
 
