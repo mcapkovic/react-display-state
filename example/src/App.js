@@ -24,6 +24,7 @@ function App() {
         title="Title"
         renderCount
         expanded
+        copy
         state={{ theme, a: "1", b: "2", c: { d: "3", e: "4" } }}
       />
       <button

@@ -12,6 +12,7 @@
   border-width: 2px;
   border-style: solid;
   transition: border-color 0.2s ease;
+  position: relative;
 }
 
 .component pre {

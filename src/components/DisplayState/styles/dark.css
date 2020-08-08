@@ -24,3 +24,9 @@
 .title:hover {
   background: rgba(blackBlueRGB, 0.4);
 }
+
+.copyButton{
+  background-color: transparent;
+  border-color: blackBlue;
+  color: rgb(150 150 150);;
+}

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./styles/displayState.css";
 import lightTheme from "./styles/light.css";
 import darkTheme from "./styles/dark.css";
+import Copy from "./Copy";
 
 /** Show display state */
 export function DisplayState(props) {
@@ -28,12 +29,14 @@ export function DisplayState(props) {
     }
   });
 
+  const valueString = JSON.stringify(props.state, null, 2);
   return (
     <div
       id={`displayState${id.current}`}
       style={props.style}
       className={`${styles.component} ${theme.component} ${props.className}`}
     >
+      {props.copy && <Copy theme={theme} value={valueString} />}
       <div
         className={`${styles.title} ${theme.title}`}
         onClick={() => {
@@ -51,7 +54,7 @@ export function DisplayState(props) {
           isExpanded ? styles.contentExpaded : ""
         }`}
       >
-        {JSON.stringify(props.state, null, 2)}
+        {valueString}
       </pre>
       <div
         className={`${styles.more} ${isExpanded ? styles.moreHidden : ""}`}
@@ -70,13 +73,15 @@ DisplayState.propTypes = {
   style: PropTypes.object,
   title: PropTypes.string,
   /** Theme switch */
-  theme: PropTypes.oneOf(['light', 'dark']),
+  theme: PropTypes.oneOf(["light", "dark"]),
   /** State to show */
   state: PropTypes.any,
   /** DisplayState default size */
   expanded: PropTypes.bool,
   /** Activate render count */
-  renderCount: PropTypes.bool
+  renderCount: PropTypes.bool,
+  /** Enable copy button */
+  copy: PropTypes.bool
 };
 
 DisplayState.defaultProps = {
@@ -86,5 +91,6 @@ DisplayState.defaultProps = {
   theme: "light",
   state: null,
   expanded: false,
-  renderCount: false
+  renderCount: false,
+  copy: false
 };
