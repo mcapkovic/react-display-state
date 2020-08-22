@@ -1,6 +1,8 @@
 import React from "react";
 import copy from "./styles/copy.css";
 
+function doNothing(){}
+
 function Copy(props) {
   const { value, theme } = props;
   const boxRef = React.useRef();
@@ -17,6 +19,7 @@ function Copy(props) {
         className={copy.textAreaField}
         ref={boxRef}
         value={value}
+        onChange={doNothing}
       />
       <button
         className={`${copy.copyButton} ${theme.copyButton}`}
