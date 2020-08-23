@@ -1,16 +1,18 @@
 import React from "react";
 import copy from "./styles/copy.css";
 
-function doNothing(){}
+function doNothing() {}
 
 function Copy(props) {
   const { value, theme } = props;
   const boxRef = React.useRef();
+  const [toastrToggle, setToastrToggle] = React.useState(null);
 
   const memoizedCopy = React.useCallback(() => {
     boxRef.current.select();
     document.execCommand("copy");
-  }, [value, boxRef.current]);
+    setToastrToggle(!toastrToggle);
+  }, [value, boxRef.current, toastrToggle, setToastrToggle]);
 
   return (
     <React.Fragment>
@@ -27,6 +29,14 @@ function Copy(props) {
       >
         Copy
       </button>
+
+     {toastrToggle !== null && <div
+        className={`${copy.copyToastr} ${
+          toastrToggle ? copy.copyToastrOne : copy.copyToastrTwo
+        }`}
+      >
+        Copied!
+      </div>}
     </React.Fragment>
   );
 }

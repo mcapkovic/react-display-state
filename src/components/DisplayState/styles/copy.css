@@ -15,4 +15,41 @@
     border-style: solid;
     border-width: 2px;
     font-size: 13px;
+    cursor: pointer;
+}
+
+.copyToastr{
+  position: fixed;
+  display: inline-block;
+  top: 0.5em;
+  right: 0.5em;
+  background: #8a8a8ac2;
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.4em;
+  opacity: 0;
+}
+
+@keyframes one {
+  0%   {opacity: 0;}
+  10%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+
+.copyToastrOne{
+  animation: one 2s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes two {
+  0%   {opacity: 0;}
+  10%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.copyToastrTwo{
+  animation: two 2s;
+  animation-fill-mode: forwards;
 }

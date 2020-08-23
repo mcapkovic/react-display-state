@@ -10,9 +10,32 @@ storiesOf("Example", module).add("DisplayState", () => (
       title="Title"
       renderCount
       expanded
-      state={{ a: "1", b: "2"}}
+      state={{ a: "1", b: "2" }}
     />
     <DisplayState
+      style={{ margin: "1em" }}
+      theme="dark"
+      title="Title"
+      renderCount
+      expanded
+      state={{ a: "1", b: "2", c: { d: "3", e: "4" } }}
+    />
+  </>
+));
+
+storiesOf("Example", module).add("DisplayState with copy", () => (
+  <>
+    <DisplayState
+      copy
+      style={{ margin: "1em" }}
+      theme="light"
+      title="Title"
+      renderCount
+      expanded
+      state={{ a: "1", b: "2" }}
+    />
+    <DisplayState
+      copy
       style={{ margin: "1em" }}
       theme="dark"
       title="Title"
