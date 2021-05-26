@@ -21,7 +21,7 @@ export function DisplayState(props) {
   }, []);
 
   useEffect(() => {
-    if (props.renderCount) {
+    if (props.renderCount && element.current) {
       element.current.classList.add(theme.highlight);
       setTimeout(function() {
         element.current.classList.remove(theme.highlight);
